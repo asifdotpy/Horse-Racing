@@ -723,12 +723,11 @@ aside ul {
 	padding: 1vw;
 	border: 2px solid #555;
 	border-radius: 20px;
-	margin-top: 5vh;
+	margin-top: 2vh;
 	margin-left: 3.5vw;
 	overflow: auto;
 	float: left;
 	width: 50vw;
-	height: 40vh;
 }
 
 #funds {
@@ -844,13 +843,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .bn632-hover {
 	margin: 10px auto;
-	padding: 20px;
 	width: 80px;
 	font-size: 14px;
 	font-weight: 600;
 	color: #fff;
 	cursor: pointer;
-	height: auto;
+	height: 40px;
 	text-align: center;
 	border: none;
 	background-size: 300% 100%;
@@ -874,10 +872,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .bn632-hover.bn28 {
-	background-image: linear-gradient(to right,
-			#eb3941,
-			#f15e64,
-			#e14e53,
-			#e2373f);
 	box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+
+.white-btn {
+	background-color: #f4f7f9;
+	color: #000;
+}
+
+.white-btn:hover {
+	background-color: #bbb;
+}
+
+.blue-btn {
+	background-color: #2980b9;
+	color: #000;
+}
+
+.blue-btn:hover {
+	background-color: #535fe8;
+}
+
+.confirm-btn {
+	background-color: #f26868;
+}
+
+.confirm-btn:hover {
+	background-color: #cc4343;
 }
