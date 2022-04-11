@@ -5,38 +5,143 @@ Filename: game.css
 Date: 30/04/17
 */
 
-body {background-image: url(images/bg.png); margin: 0; padding: 0; font-family: calibri, sans-serif;}
+body {
+	background-image: url(images/bg.png);
+	margin: 0;
+	padding: 0;
+	font-family: calibri, sans-serif;
+}
 
 
-aside {display: none; width: 200px; position: fixed; height: 100vh; left: 100%; margin-left: -240px; background-color: #ddd; border-left: 5px solid #bbb; padding: 20px;}
-#closeside {float: right; font-weight: bold; cursor: pointer;}
+aside {
+	display: none;
+	width: 200px;
+	position: fixed;
+	height: 100vh;
+	left: 100%;
+	margin-left: -240px;
+	background-color: #ddd;
+	border-left: 5px solid #bbb;
+	padding: 20px;
+}
 
-.character {position: absolute; top: 200px; left: 200px; display: block;}
-.character .body {width: 32px; height: 32px; background-image: url(images/body0.png); background-position: 64px 0px; margin-top: 14px; }
-.character .head {width: 32px; height: 32px; background-image: url(images/head0.png); margin-bottom: 0;position: absolute; background-repeat: no-repeat; background-position: 0px -64px;}
+#closeside {
+	float: right;
+	font-weight: bold;
+	cursor: pointer;
+}
 
-aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom: 20px; overflow: auto;}
-.heads li, .bodies li {width: 32px; height: 32px; background-position: 0 -64px; float: left; cursor: pointer; border: 2px solid #ddd; margin-right: 4px;}
-.heads li:hover, .bodies li:hover {border: 2px solid red;}
-#head0 {background-image: url(images/head0.png);}
+.character {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	display: block;
+}
 
-#head1 {background-image: url(images/head1.png);}
-#head2 {background-image: url(images/head2.png);}
-#head3 {background-image: url(images/head3.png);}
-#head4 {background-image: url(images/head4.png);}
+.character .body {
+	width: 32px;
+	height: 32px;
+	background-image: url(images/body0.png);
+	background-position: 64px 0px;
+	margin-top: 14px;
+}
 
-.bodies li {background-position: 64px 0px;}
-#body0 {background-image: url(images/body0.png);}
-#body1 {background-image: url(images/body1.png);}
-#body2 {background-image: url(images/body2.png);}
-#body3 {background-image: url(images/body3.png);}
-#body4 {background-image: url(images/body4.png);}
+.character .head {
+	width: 32px;
+	height: 32px;
+	background-image: url(images/head0.png);
+	margin-bottom: 0;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: 0px -64px;
+}
 
-.tree {float: right; margin-top: 2vh; margin-right: 5vw;}
+aside ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-bottom: 20px;
+	overflow: auto;
+}
 
-#opponent {left: 500px; top: 500px;}
-#opponent .body {background-image: url(images/body1.png);}
-#opponent .head {background-image: url(images/head1.png);}
+.heads li,
+.bodies li {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -64px;
+	float: left;
+	cursor: pointer;
+	border: 2px solid #ddd;
+	margin-right: 4px;
+}
+
+.heads li:hover,
+.bodies li:hover {
+	border: 2px solid red;
+}
+
+#head0 {
+	background-image: url(images/head0.png);
+}
+
+#head1 {
+	background-image: url(images/head1.png);
+}
+
+#head2 {
+	background-image: url(images/head2.png);
+}
+
+#head3 {
+	background-image: url(images/head3.png);
+}
+
+#head4 {
+	background-image: url(images/head4.png);
+}
+
+.bodies li {
+	background-position: 64px 0px;
+}
+
+#body0 {
+	background-image: url(images/body0.png);
+}
+
+#body1 {
+	background-image: url(images/body1.png);
+}
+
+#body2 {
+	background-image: url(images/body2.png);
+}
+
+#body3 {
+	background-image: url(images/body3.png);
+}
+
+#body4 {
+	background-image: url(images/body4.png);
+}
+
+.tree {
+	float: right;
+	margin-top: 2vh;
+	margin-right: 5vw;
+}
+
+#opponent {
+	left: 500px;
+	top: 500px;
+}
+
+#opponent .body {
+	background-image: url(images/body1.png);
+}
+
+#opponent .head {
+	background-image: url(images/head1.png);
+}
 
 .character.standUp .head {
 	background-position: 0px 0px;
@@ -79,7 +184,7 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 }
 
 .character.walkUp .body {
-    animation: walkup 1s steps(3) infinite;
+	animation: walkup 1s steps(3) infinite;
 }
 
 
@@ -89,7 +194,7 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 }
 
 .character.walkDown .body {
-    animation: walkdown 1s steps(3) infinite;
+	animation: walkdown 1s steps(3) infinite;
 }
 
 .character.walkLeft .head {
@@ -100,12 +205,19 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 }
 
 .character.walkLeft .body {
-    animation: walkleft 1s steps(3) infinite;
+	animation: walkleft 1s steps(3) infinite;
 }
 
 @keyframes walkleft {
-   0%, 100% { background-position:  -32px  -32px; }
-     50% { background-position: -32px -128px; }
+
+	0%,
+	100% {
+		background-position: -32px -32px;
+	}
+
+	50% {
+		background-position: -32px -128px;
+	}
 }
 
 
@@ -117,75 +229,144 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 }
 
 .character.walkRight .body {
-    animation: walkright 1s steps(3) infinite;
+	animation: walkright 1s steps(3) infinite;
 }
 
 @keyframes walkright {
-   0%, 100% { background-position:  -96px  -32px; }
-     50% { background-position: -96px -128px; }
+
+	0%,
+	100% {
+		background-position: -96px -32px;
+	}
+
+	50% {
+		background-position: -96px -128px;
+	}
 }
 
 
 
 @keyframes walkup {
-   0%, 100% { background-position:  0px  -32px; }
-     50% { background-position: 0px -128px; }
+
+	0%,
+	100% {
+		background-position: 0px -32px;
+	}
+
+	50% {
+		background-position: 0px -128px;
+	}
 }
 
 
 @keyframes walkdown {
-   0%, 100% { background-position:  -64px  -32px; }
-     50% { background-position: -64px -128px; }
+
+	0%,
+	100% {
+		background-position: -64px -32px;
+	}
+
+	50% {
+		background-position: -64px -128px;
+	}
 }
 
 
 @keyframes headbob {
-   0%, 100% { margin-top: 0px; }
-     50% { margin-top: 1px; }
+
+	0%,
+	100% {
+		margin-top: 0px;
+	}
+
+	50% {
+		margin-top: 1px;
+	}
 }
 
 
 @keyframes headbob2 {
-   0%, 100% { margin-left: -2px; }
-     50% { margin-left: 0px; }
+
+	0%,
+	100% {
+		margin-left: -2px;
+	}
+
+	50% {
+		margin-left: 0px;
+	}
 }
 
 
 @keyframes headbob3 {
-   0%, 100% { margin-left: 2px; }
-     50% { margin-left: 0px; }
+
+	0%,
+	100% {
+		margin-left: 2px;
+	}
+
+	50% {
+		margin-left: 0px;
+	}
 }
 
 
-.track {border-style: solid;
+.track {
+	border-style: solid;
 	border-collapse: separate;
 	display: table;
 	border-width: 16px;
 	-moz-border-image: url(outer.png) 14 15 14 16 repeat;
 	-webkit-border-image: url(images/outer.png) 14 15 14 16 repeat;
 	-o-border-image: url(outer.png) 14 15 14 16 repeat;
-	border-image: url(images/outer.png) 14 15 14 16 repeat; background-image: url(images/mud.png);
-	 position: absolute; height: 80vh; width: 80vw; margin: 5vw; margin-top: 5vh;
+	border-image: url(images/outer.png) 14 15 14 16 repeat;
+	background-image: url(images/mud.png);
+	position: absolute;
+	height: 80vh;
+	width: 80vw;
+	margin: 5vw;
+	margin-top: 5vh;
 }
 
 
 .track .inner {
 	background-image: url(images/bg.png);
-	border-image: url(images/inner.png); border-image-slice: 16 16 16 16 fill; border-image-width: 16px 16px 16px 16px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round;
-	border-collapse: separate; margin-top: 15vh; margin-left: 10vw; display: table;  solid transparent; background-color: green; width: 60vw; height: 50vh;}
+	border-image: url(images/inner.png);
+	border-image-slice: 16 16 16 16 fill;
+	border-image-width: 16px 16px 16px 16px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: round round;
+	border-collapse: separate;
+	margin-top: 15vh;
+	margin-left: 10vw;
+	display: table;
+	background-color: green;
+	width: 60vw;
+	height: 50vh;
+}
 
-.horse {background-image: url(images/horse2.png);}
+.horse {
+	background-image: url(images/horse2.png);
+}
+
 .horse.runLeft {
 	width: 96px;
 	height: 60px;
 	display: block;
 	background-position: 0px -256px;
-	animation: horseLeft steps(1) 0.5s  infinite;
+	animation: horseLeft steps(1) 0.5s infinite;
 }
 
 @keyframes horseLeft {
-	0%, 100% {background-position: 0px -256px; }
-	50% {background-position: 0px -450px;}
+
+	0%,
+	100% {
+		background-position: 0px -256px;
+	}
+
+	50% {
+		background-position: 0px -450px;
+	}
 }
 
 
@@ -194,97 +375,172 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 	height: 60px;
 	display: block;
 	background-position: 0px -320px;
-	animation: horseRight steps(1) 0.5s  infinite;
+	animation: horseRight steps(1) 0.5s infinite;
 }
 
 @keyframes horseRight {
-	0%, 100% {background-position: 0px -320px; }
-	50% {background-position: 0px -512px;}
+
+	0%,
+	100% {
+		background-position: 0px -320px;
+	}
+
+	50% {
+		background-position: 0px -512px;
+	}
 }
 
 .horse.runDown {
 	width: 48px;
 	height: 64px;
-	background-position:48px 192px;
-	animation: horseDown steps(1) 0.75s  infinite;
+	background-position: 48px 192px;
+	animation: horseDown steps(1) 0.75s infinite;
 }
 
 
 @keyframes horseDown {
-	0%, 100% {background-position:48px -192px; }
-	33% {background-position:48px -380px; }
-	66% {background-position:48px 0px;}
+
+	0%,
+	100% {
+		background-position: 48px -192px;
+	}
+
+	33% {
+		background-position: 48px -380px;
+	}
+
+	66% {
+		background-position: 48px 0px;
+	}
 }
 
 
 .horse.runUp {
 	width: 48px;
 	height: 64px;
-	background-position:0px 192px;
-	animation: horseUp steps(1) 0.75s  infinite;
+	background-position: 0px 192px;
+	animation: horseUp steps(1) 0.75s infinite;
 }
 
 
 @keyframes horseUp {
-	0%, 100% {background-position:0px -192px; }
-	33% {background-position:0px -380px; }
-	66% {background-position:0px 0px;}
+
+	0%,
+	100% {
+		background-position: 0px -192px;
+	}
+
+	33% {
+		background-position: 0px -380px;
+	}
+
+	66% {
+		background-position: 0px 0px;
+	}
 }
 
 
 #startline {
 	width: 2vw;
 	height: 15vh;
-background-color: #eee;
-background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-background-size:1vw 1vw;
-position: absolute;
-margin-left: 20vw;
-opacity: 0.7;
+	background-color: #eee;
+	background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+		linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+	background-size: 1vw 1vw;
+	position: absolute;
+	margin-left: 20vw;
+	opacity: 0.7;
 }
 
 #horse1 {
-	position: absolute; top: 4vh; z-index: 999;
+	position: absolute;
+	top: 4vh;
+	z-index: 999;
 }
 
-#horse4 .rider .head {background-image: url(images/head2.png);}
-#horse4 .rider .body {background-image: url(images/body3.png);}
+#horse4 .rider .head {
+	background-image: url(images/head2.png);
+}
+
+#horse4 .rider .body {
+	background-image: url(images/body3.png);
+}
 
 
-#horse3 .rider .head {background-image: url(images/head1.png);}
-#horse3 .rider .body {background-image: url(images/body1.png);}
+#horse3 .rider .head {
+	background-image: url(images/head1.png);
+}
 
-#horse2 .rider .head {background-image: url(images/head4.png);}
-#horse2 .rider .body {background-image: url(images/body4.png);}
+#horse3 .rider .body {
+	background-image: url(images/body1.png);
+}
+
+#horse2 .rider .head {
+	background-image: url(images/head4.png);
+}
+
+#horse2 .rider .body {
+	background-image: url(images/body4.png);
+}
 
 #horse2 {
-	position: absolute; top: 8vh;  z-index: 999;
+	position: absolute;
+	top: 8vh;
+	z-index: 999;
 	background-image: url(images/horse3.png);
 }
 
 #horse3 {
-	position: absolute; top: 12vh;  z-index: 999;
+	position: absolute;
+	top: 12vh;
+	z-index: 999;
 	background-image: url(images/horse1.png);
 }
 
 #horse4 {
-	position: absolute; top: 16vh; z-index: 999;
+	position: absolute;
+	top: 16vh;
+	z-index: 999;
 	background-image: url(images/horse4.png);
 }
 
 
-.horse {left: 20vw;}
+.horse {
+	left: 20vw;
+}
 
-.horse.standLeft {background-position: 0px -64px; width: 96px; height: 60px;}
-.horse.standLeft .rider .body {background-position: -32px -320px;}
-.horse.standLeft .rider .head {background-position: 0px -32px;}
+.horse.standLeft {
+	background-position: 0px -64px;
+	width: 96px;
+	height: 60px;
+}
+
+.horse.standLeft .rider .body {
+	background-position: -32px -320px;
+}
+
+.horse.standLeft .rider .head {
+	background-position: 0px -32px;
+}
 
 
-.horse.standRight {background-position: 0px -128px; width: 96px; height: 60px;}
-.horse.standRight .rider {margin-left: -15px;}
-.horse.standRight .rider .body {background-position: -96px -320px;}
-.horse.standRight .rider .head {background-position: 0px -96px;}
+.horse.standRight {
+	background-position: 0px -128px;
+	width: 96px;
+	height: 60px;
+}
+
+.horse.standRight .rider {
+	margin-left: -15px;
+}
+
+.horse.standRight .rider .body {
+	background-position: -96px -320px;
+}
+
+.horse.standRight .rider .head {
+	background-position: 0px -96px;
+}
 
 
 .horse .rider .head {
@@ -299,14 +555,16 @@ opacity: 0.7;
 
 .horse .rider .body {
 	background-image: url(images/body0.png);
- 	width: 32px;
- 	height: 32px;
- 	margin-left: 40px;
- 	margin-top: 8px;
+	width: 32px;
+	height: 32px;
+	margin-left: 40px;
+	margin-top: 8px;
 }
 
 
-.horse.runDown .rider, .horse.runRight .rider, .horse.runLeft .rider{
+.horse.runDown .rider,
+.horse.runRight .rider,
+.horse.runLeft .rider {
 	animation: riderBob1 0.75s infinite;
 }
 
@@ -330,7 +588,8 @@ opacity: 0.7;
 }
 
 
-.horse.runDown, .horse.runUp {
+.horse.runDown,
+.horse.runUp {
 	margin-left: 32px;
 }
 
@@ -354,7 +613,7 @@ opacity: 0.7;
 
 .horse.runUp .rider {
 	margin-left: -32px;
-    animation: riderBob2 0.75s infinite;
+	animation: riderBob2 0.75s infinite;
 }
 
 .horse.runUp .rider .head {
@@ -378,24 +637,52 @@ opacity: 0.7;
 
 
 @keyframes headbob4 {
-   0%, 100% { margin-left: 40px; }
-     50% { margin-left: 42px; }
+
+	0%,
+	100% {
+		margin-left: 40px;
+	}
+
+	50% {
+		margin-left: 42px;
+	}
 }
 
 @keyframes headbob5 {
-   0%, 100% { margin-top: -10px; }
-     50% { margin-top: -8px; }
+
+	0%,
+	100% {
+		margin-top: -10px;
+	}
+
+	50% {
+		margin-top: -8px;
+	}
 }
 
 
 @keyframes riderBob1 {
-	 0%, 100% { margin-top: 8px; }
-     50% { margin-top: 10px; }
+
+	0%,
+	100% {
+		margin-top: 8px;
+	}
+
+	50% {
+		margin-top: 10px;
+	}
 }
 
 @keyframes riderBob2 {
-	 0%, 100% { margin-top: 18px; }
-     50% { margin-top: 20px; }
+
+	0%,
+	100% {
+		margin-top: 18px;
+	}
+
+	50% {
+		margin-top: 20px;
+	}
 }
 
 
@@ -424,31 +711,173 @@ opacity: 0.7;
 #start:hover {
 	color: #000;
 }
-#start:disabled{
+
+#start:disabled {
 	background: grey;
 
 }
-#bet, #results {
+
+#bet,
+#results {
 	background-color: #ffefb4;
 	padding: 1vw;
-	width: 20vw;
 	border: 2px solid #555;
 	border-radius: 20px;
 	margin-top: 5vh;
-	margin-left: 2vw;
+	margin-left: 3.5vw;
 	overflow: auto;
 	float: left;
+	width: 50vw;
+	height: 40vh;
 }
 
-#funds {font-weight: bold;}
-#funds:before {content: "£";}
+#funds {
+	font-weight: bold;
+}
 
-label, input, select {float:  left; display: block; width: 8vw; margin-bottom: 0.5vh;}
-label {clear: left;}
+#funds:before {
+	content: "$";
+}
 
-#results {width: auto; position: absolute; margin-top: 8vh; margin-left: 48vw;}
-#results td {height: 30px; width: 30px; background-repeat: no-repeat; background-position: 0px -64px;}
-#results .horse1 { background-image: url(images/head0.png);}
-#results .horse2 {  background-image: url(images/head4.png);}
-#results .horse3 {  background-image: url(images/head1.png);}
-#results .horse4 {  background-image: url(images/head2.png);}
+label,
+select {
+	float: left;
+	display: block;
+	width: 8vw;
+	margin-bottom: 0.5vh;
+}
+
+label {
+	clear: left;
+}
+
+#results {
+	width: auto;
+	position: absolute;
+	margin-top: 8vh;
+	margin-left: 48vw;
+}
+
+#results td {
+	height: 30px;
+	width: 30px;
+	background-repeat: no-repeat;
+	background-position: 0px -64px;
+}
+
+#results .horse1 {
+	background-image: url(images/head0.png);
+}
+
+#results .horse2 {
+	background-image: url(images/head4.png);
+}
+
+#results .horse3 {
+	background-image: url(images/head1.png);
+}
+
+#results .horse4 {
+	background-image: url(images/head2.png);
+}
+
+/* Input button stylesheet */
+form {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.value-button {
+	display: inline-block;
+	border: 1px solid #ddd;
+	margin: 0px;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 11px 0;
+	background: #eee;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.value-button:hover {
+	cursor: pointer;
+}
+
+form #decrease {
+	margin-right: -4px;
+	border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+	margin-left: -4px;
+	border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+	margin: 0px;
+	padding: 0px;
+}
+
+input#number {
+	text-align: center;
+	border: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin: 0px;
+	width: 40px;
+	height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Button css for selecting horse */
+
+.bn632-hover {
+	margin: 10px auto;
+	padding: 20px;
+	width: 80px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	height: auto;
+	text-align: center;
+	border: none;
+	background-size: 300% 100%;
+	border-radius: 8px;
+	moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+	background-position: 100% 0;
+	moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+	outline: none;
+}
+
+.bn632-hover.bn28 {
+	background-image: linear-gradient(to right,
+			#eb3941,
+			#f15e64,
+			#e14e53,
+			#e2373f);
+	box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
