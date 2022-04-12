@@ -876,21 +876,23 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .white-btn {
-	background-color: #f4f7f9;
+	background-color: #f2f9f9;
 	color: #000;
 }
 
+.active,
 .white-btn:hover {
 	background-color: #bbb;
 }
 
 .blue-btn {
-	background-color: #2980b9;
+	background-color: #f2f9f9;
 	color: #000;
 }
 
+.active,
 .blue-btn:hover {
-	background-color: #535fe8;
+	background-color: #bbb;
 }
 
 .confirm-btn {

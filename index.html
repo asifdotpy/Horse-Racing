@@ -32,8 +32,8 @@
         </div>
 
         <div class="inner">
-            <!-- //Button goes here.
-                <button id="start">Start Race</button> -->
+            <!-- //Button goes here. -->
+                <button id="start" style="display: none;">Start Race</button>
 
             <div id="bet">
                 <p style="text-align: center;">You currently have <span id="funds">100</span></p>
@@ -43,9 +43,9 @@
                     <input type="number" id="number" value="0" />
                     <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
                 </form><!-- <input type="number" id="amount" value="0"> Add type and default value -->
-                <div style="display: block; align-items: center; text-align: center;">
-                    <a href="/"><button class="bn632-hover bn28 white-btn">White</button></a>
-                    <a href="/"><button class="bn632-hover bn28 blue-btn">Blue</button></a>
+                <div id="animalSelect" style="display: block; align-items: center; text-align: center;">
+                    <button class="bn632-hover bn28 white-btn">White</button>
+                    <button class="bn632-hover bn28 blue-btn active">Blue</button>
                   </div>
                 <div style="display: block; align-items: center; text-align: center;">
                     <a href="/"><button class="bn632-hover bn28 confirm-btn">Confirm</button></a>
