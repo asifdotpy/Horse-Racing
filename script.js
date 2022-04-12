@@ -122,7 +122,6 @@ function Horse(id, x, y) {
 			document.getElementById('funds').innerText = funds;
 		} else if (results.length == 4) {
 			//All horse arrived, enable again the Start Button
-			document.getElementById('start').disabled = false;
 		}
 	}
 }
@@ -211,6 +210,7 @@ window.onload = function () {
 	animalSelect();
 };
 
+// This function will change the css property of selected button
 
 async function animalSelect() {
 	// Add active class to the current button (highlight it)
