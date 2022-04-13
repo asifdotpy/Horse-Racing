@@ -133,14 +133,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	var horse1 = new Horse('horse1', 20, 4);
 	var horse2 = new Horse('horse2', 20, 8);
-	var horse3 = new Horse('horse3', 20, 12);
-	var horse4 = new Horse('horse4', 20, 16);
 
 	//Event listener to the Start button
 	document.getElementById('start').onclick = function () {
-		amount = parseInt(document.getElementById('amount').value);
-		num_lap = parseInt(document.getElementById('num_lap').value);
-		bethorse = parseInt(document.getElementById('bethorse').value);
+		amount = parseInt(document.getElementById('number').value);
+		console.log(amount);
+		num_lap = 1;
+		bethorse = selectedAnimal();
+		console.log(bethorse);
 
 		if (funds < amount) {
 			alert('Not enough funds.');
@@ -160,8 +160,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			results = [];//Results array is to save the horse numbers when the race is finished.
 			horse1.run();
 			horse2.run();
-			horse3.run();
-			horse4.run();
 		}
 	}
 });
@@ -197,6 +195,11 @@ function startTimer(duration, display) {
 		display.textContent = minutes + ":" + seconds;
 
 		if (--timer < 0) {
+			//when countdown time reaches 00 display property
+			//will be changed to none for 15 seconds.
+			document.getElementById('countdownTimer').innerHTML = "Running";
+			setTimeout(20);
+			document.getElementById('start').click();
 			timer = duration;
 		}
 	}, 1000);
@@ -222,5 +225,26 @@ async function animalSelect() {
 			current[0].className = current[0].className.replace(" active", "");
 			this.className += " active";
 		});
+	}
+}
+
+function selectedAnimal() {
+	//Checking the selected button from the player by looking
+	//at the active class into the className
+
+	let btns = document.getElementById('animalSelect');
+	let CheckAnimal = btns.getElementsByClassName('bn28');
+
+	for (let i = 0; i < CheckAnimal.length; i++) {
+
+		if (CheckAnimal[i].classList.contains('active')) {
+
+			if (CheckAnimal[i].classList[2] == "blue-btn") {
+				return "Blue"
+			}
+			else {
+				return "White"
+			}
+		}
 	}
 }
