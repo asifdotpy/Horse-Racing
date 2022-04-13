@@ -101,7 +101,7 @@ function Horse(id, x, y) {
 	this.arrive = function () {
 		//Stop the horse run by change class to standRight
 		this.element.className = 'horse standRight';
-		this.lap = 0;//Reset the lap
+		this.lap = 1;//Reset the lap
 
 		/*Show the result*/
 		var tds = document.querySelectorAll('#results .result');//Get all table cell to display the result
@@ -137,10 +137,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	//Event listener to the Start button
 	document.getElementById('start').onclick = function () {
 		amount = parseInt(document.getElementById('number').value);
-		console.log(amount);
+		//	console.log(amount);
 		num_lap = 1;
 		bethorse = selectedAnimal();
-		console.log(bethorse);
+		//	console.log(bethorse);
 
 		if (funds < amount) {
 			alert('Not enough funds.');
@@ -198,8 +198,12 @@ function startTimer(duration, display) {
 			//when countdown time reaches 00 display property
 			//will be changed to none for 15 seconds.
 			document.getElementById('countdownTimer').innerHTML = "Running";
-			setTimeout(20);
+			//Trigerring the start button.
 			document.getElementById('start').click();
+			//This async function will check the winner. Till then
+			// the innerHtml will be Running
+
+
 			timer = duration;
 		}
 	}, 1000);
@@ -240,10 +244,10 @@ function selectedAnimal() {
 		if (CheckAnimal[i].classList.contains('active')) {
 
 			if (CheckAnimal[i].classList[2] == "blue-btn") {
-				return "Blue"
+				return 2
 			}
 			else {
-				return "White"
+				return 1
 			}
 		}
 	}
