@@ -115,8 +115,10 @@ function Horse(id, x, y) {
 		if (results.length == 1) {
 			//If win horse is the bet horse, then add the fund
 			if (this.number == bethorse) {
+				document.getElementById("resultText").innerHTML = "YOU WON";
 				funds += amount;
 			} else {
+				document.getElementById("resultText").innerHTML = "YOU LOST";
 				funds -= amount;
 			}
 			document.getElementById('funds').innerText = funds;
