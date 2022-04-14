@@ -882,7 +882,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .active,
 .white-btn:hover {
-	background-color: #bbb;
+	background-color: #98fb98;
 }
 
 .blue-btn {
@@ -892,7 +892,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .active,
 .blue-btn:hover {
-	background-color: #bbb;
+	background-color: #98fb98;
 }
 
 .confirm-btn {
@@ -901,4 +901,19 @@ input[type=number]::-webkit-outer-spin-button {
 
 .confirm-btn:hover {
 	background-color: #cc4343;
+}
+
+.white-btn:disabled,
+.white-btn[disabled] {
+	background-color: #bbb;
+}
+
+.blue-btn:disabled,
+.blue-btn[disabled] {
+	background-color: #bbb;
+}
+
+.confirm-btn:disabled,
+.confirm-btn[disabled] {
+	background-color: #bbb;
 }

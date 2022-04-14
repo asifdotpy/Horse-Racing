@@ -122,6 +122,7 @@ function Horse(id, x, y) {
 				funds -= amount;
 			}
 			document.getElementById('funds').innerText = funds;
+
 		} else if (results.length == 4) {
 			//All horse arrived, enable again the Start Button
 		}
@@ -204,8 +205,6 @@ function startTimer(duration, display) {
 			document.getElementById('start').click();
 			//This async function will check the winner. Till then
 			// the innerHtml will be Running
-
-
 			timer = duration;
 		}
 	}, 1000);

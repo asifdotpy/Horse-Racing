@@ -44,11 +44,11 @@
                     <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
                 </form><!-- <input type="number" id="amount" value="0"> Add type and default value -->
                 <div id="animalSelect" style="display: block; align-items: center; text-align: center;">
-                    <button class="bn632-hover bn28 white-btn">White</button>
-                    <button class="bn632-hover bn28 blue-btn active">Blue</button>
+                    <button id="white-btn" class="bn632-hover bn28 white-btn">White</button>
+                    <button id="blue-btn" class="bn632-hover bn28 blue-btn active">Blue</button>
                   </div>
                 <div style="display: block; align-items: center; text-align: center;">
-                    <button id="confirm" class="bn632-hover bn28 confirm-btn">Confirm</button>
+                    <button id="confirm" class="bn632-hover bn28 confirm-btn" onclick="confirmBet()">Confirm</button>
                 </div>
                 <div id="report">
                     <p style="font-weight: 800;">Status:        <span style="color: coral;">Not Confirmed</span></p>
