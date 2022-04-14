@@ -253,3 +253,22 @@ function selectedAnimal() {
 		}
 	}
 }
+
+async function confirmBet() {
+	// confirm button will first check the non-active button from
+	// animalSelect then disabled it. It will also disabled confirm btn.
+	var animalSelect = await document.getElementById("animalSelect");
+	var btns = await animalSelect.getElementsByClassName("bn28");
+	for (var i = 0; i < btns.length; i++) {
+		if (btns[i].classList.contains('active')) {
+			if (btns[i].classList.contains('white-btn')) {
+				document.getElementById('blue-btn').disabled = true;
+				document.getElementById('confirm').disabled = true;
+			}
+			else {
+				document.getElementById('white-btn').disabled = true;
+				document.getElementById('confirm').disabled = true;
+			}
+		}
+	}
+}
