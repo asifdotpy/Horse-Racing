@@ -261,6 +261,7 @@ async function confirmBet() {
 	var btns = await animalSelect.getElementsByClassName("bn28");
 	for (var i = 0; i < btns.length; i++) {
 		if (btns[i].classList.contains('active')) {
+			var activeHorse = btns[i].innerText;
 			if (btns[i].classList.contains('white-btn')) {
 				document.getElementById('blue-btn').disabled = true;
 				document.getElementById('confirm').disabled = true;
@@ -271,4 +272,6 @@ async function confirmBet() {
 			}
 		}
 	}
+	//Confirm button will change the text under Status.
+	document.getElementById('status').innerHTML = activeHorse + " Confirmed";
 }
