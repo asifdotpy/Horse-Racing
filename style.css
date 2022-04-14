@@ -17,7 +17,7 @@ aside {
 	display: none;
 	width: 200px;
 	position: fixed;
-	height: 10vh;
+	height: 100vh;
 	left: 100%;
 	margin-left: -240px;
 	background-color: #ddd;
@@ -323,7 +323,7 @@ aside ul {
 	background-image: url(images/mud.png);
 	position: absolute;
 	height: 80vh;
-	width: 80vw;
+	width: 86vw;
 	margin: 5vw;
 	margin-top: 5vh;
 }
@@ -338,11 +338,11 @@ aside ul {
 	border-image-repeat: round round;
 	border-collapse: separate;
 	margin-top: 15vh;
-	margin-left: 10vw;
+	margin-left: 13vw;
 	display: table;
 	background-color: green;
 	width: 60vw;
-	height: 50vh;
+	height: 44vh;
 }
 
 .horse {

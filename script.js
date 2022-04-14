@@ -216,6 +216,10 @@ window.onload = function () {
 	display = document.querySelector('#countdownTimer');
 	startTimer(tenSeconds, display);
 	animalSelect();
+	window.resizeTo(
+		window.screen.availWidth / 2,
+		window.screen.availHeight / 2
+	);
 };
 
 // This function will change the css property of selected button
