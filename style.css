@@ -17,7 +17,7 @@ aside {
 	display: none;
 	width: 200px;
 	position: fixed;
-	height: 100vh;
+	height: 10vh;
 	left: 100%;
 	margin-left: -240px;
 	background-color: #ddd;

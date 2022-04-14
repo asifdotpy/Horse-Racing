@@ -257,6 +257,8 @@ function selectedAnimal() {
 async function confirmBet() {
 	// confirm button will first check the non-active button from
 	// animalSelect then disabled it. It will also disabled confirm btn.
+	document.getElementById('increase').setAttribute('style', 'pointer-events: none;');
+	document.getElementById('decrease').setAttribute('style', 'pointer-events: none;');
 	var animalSelect = await document.getElementById("animalSelect");
 	var btns = await animalSelect.getElementsByClassName("bn28");
 	for (var i = 0; i < btns.length; i++) {
@@ -275,3 +277,5 @@ async function confirmBet() {
 	//Confirm button will change the text under Status.
 	document.getElementById('status').innerHTML = activeHorse + " Confirmed";
 }
+
+
