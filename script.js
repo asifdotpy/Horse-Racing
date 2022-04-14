@@ -217,8 +217,8 @@ window.onload = function () {
 	startTimer(tenSeconds, display);
 	animalSelect();
 	window.resizeTo(
-		window.screen.availWidth / 2,
-		window.screen.availHeight / 2
+		window.screen.availWidth / 1.5,
+		window.screen.availHeight / 1.5
 	);
 };
 
