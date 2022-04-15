@@ -230,9 +230,9 @@ async function animalSelect() {
 	var btns = await animalSelect.getElementsByClassName("bn28");
 	for (var i = 0; i < btns.length; i++) {
 		btns[i].addEventListener("click", function () {
-			var current = document.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", "");
-			this.className += " active";
+			var current = document.getElementsByClassName("activeBtn");
+			current[0].className = current[0].className.replace(" activeBtn", "");
+			this.className += " activeBtn";
 		});
 	}
 }
@@ -246,7 +246,7 @@ function selectedAnimal() {
 
 	for (let i = 0; i < CheckAnimal.length; i++) {
 
-		if (CheckAnimal[i].classList.contains('active')) {
+		if (CheckAnimal[i].classList.contains('activeBtn')) {
 
 			if (CheckAnimal[i].classList[2] == "blue-btn") {
 				return 2
@@ -266,7 +266,7 @@ async function confirmBet() {
 	var animalSelect = await document.getElementById("animalSelect");
 	var btns = await animalSelect.getElementsByClassName("bn28");
 	for (var i = 0; i < btns.length; i++) {
-		if (btns[i].classList.contains('active')) {
+		if (btns[i].classList.contains('activeBtn')) {
 			var activeHorse = btns[i].innerText;
 			if (btns[i].classList.contains('white-btn')) {
 				document.getElementById('blue-btn').disabled = true;
